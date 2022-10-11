@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 새로운 요청이 발생하지 않았는데도 주입하려고 할 때 거부함 -->
+	<bean class='kr.co.ezenac.beans.DataBean1' scope="request" />
+	<!-- id를 주면 request 영역에 자동 주입 -->
+	<bean class='kr.co.ezenac.beans.DataBean2' id='requestBean2'
+		scope="request" />
+
+</beans>
