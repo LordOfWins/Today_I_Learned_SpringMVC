@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +6,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello Spring MVC</h1>
-	<img src="image/icon-spring-framework.svg"/>
+	<a href='test1'>test1</a>
+	<a href='test2'>test2</a>
+
+	<a href='sub1/test3'>sub1/test3</a>
+	<a href='sub1/test4'>sub1/test4</a>
 </body>
 </html>
