@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>test3</h1>
+	<h1>저장 완료</h1>
 </body>
 </html>
