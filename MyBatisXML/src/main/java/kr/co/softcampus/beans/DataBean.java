@@ -3,6 +3,7 @@ package kr.co.softcampus.beans;
 public class DataBean {
 	private String data1;
 	private String data2;
+	private String data3;
 
 	public String getData1() {
 		return data1;
@@ -18,6 +19,14 @@ public class DataBean {
 
 	public void setData2(String data2) {
 		this.data2 = data2;
+	}
+
+	public String getData3() {
+		return data3;
+	}
+
+	public void setData3(String data3) {
+		this.data3 = data3;
 	}
 
 }

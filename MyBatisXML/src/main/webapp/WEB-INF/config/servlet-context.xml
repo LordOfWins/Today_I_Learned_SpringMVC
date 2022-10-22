@@ -26,7 +26,7 @@
 	<resources mapping="/**" location="/resources/" />
 
 	<!-- properties 파일의 내용을 사용할 수 있도록 Bean을 정의한다. -->
-	<beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfiguer">
+	<beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<beans:property name="location">
 			<beans:value>/WEB-INF/properties/db.properties</beans:value>
 		</beans:property>
@@ -38,7 +38,7 @@
 		<beans:property name='username' value='${db.username}' />
 		<beans:property name='password' value='${db.password}' />
 	</beans:bean>
-	<beans:bean class='org.mybatis.spring.SqlSeessionFactoryBean' id='sqlSession'>
+	<beans:bean class='org.mybatis.spring.SqlSessionFactoryBean' id='sqlSession'>
 		<beans:property name="dataSource" ref='basic_data_source' />
 		<!-- 모든 xml을 저장 -->
 		<beans:property name="mapperLocations" value='/WEB-INF/mapper/*.xml' />
