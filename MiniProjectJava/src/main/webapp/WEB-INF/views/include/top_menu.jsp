@@ -19,9 +19,6 @@
 				<c:forEach var="obj" items="${topMenuList}">
 					<li class="nav-item"><a href="${root}board/main?board_info_idx=${obj.board_info_idx}" class="nav-link">${obj.board_info_name }</a></li>
 				</c:forEach>
-				<li class="nav-item"><a href="${root }board/main" class="nav-link">유머게시판</a></li>
-				<li class="nav-item"><a href="${root }board/main" class="nav-link">정치게시판</a></li>
-				<li class="nav-item"><a href="${root }board/main" class="nav-link">스포츠게시판</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a href="${root }user/login" class="nav-link">로그인</a></li>
