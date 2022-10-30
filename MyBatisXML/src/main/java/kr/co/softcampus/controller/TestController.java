@@ -1,37 +1,33 @@
 package kr.co.softcampus.controller;
 
-import java.util.List;
-
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import kr.co.softcampus.beans.DataBean;
 
 @Controller
 public class TestController {
-	@Autowired
-	SqlSessionTemplate SqlSessionTemplate;
 
-	@GetMapping("/input_data")
-	public String input_data() {
-		return "input_data";
+	@GetMapping("/test1")
+	public String test1() {
+		System.out.println("test1");
+		return "test1";
 	}
 
-	@PostMapping("/input_pro")
-	public String input_pro(DataBean dataBean) {
-
-		SqlSessionTemplate.insert("test_db.insert_data", dataBean);
-		return "input_pro";
+	@GetMapping("/test2")
+	public String test2() {
+		System.out.println("test2");
+		return "test2";
 	}
 
-	@GetMapping("read_data")
-	public String read_data(Model model) {
-		List<DataBean> list = SqlSessionTemplate.selectList("test_db.select_data");
-		model.addAttribute("list", list);
-		return "read_data";
+	@GetMapping("/sub1/test3")
+	public String test3() {
+		System.out.println("/sub1/test3");
+		return "test3";
 	}
+
+	@GetMapping("/sub1/test4")
+	public String test4() {
+		System.out.println("/sub1/test4");
+		return "test4";
+	}
+
 }

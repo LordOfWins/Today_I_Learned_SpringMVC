@@ -34,7 +34,7 @@
 							</div>
 							<div class="form-group text-right">
 								<button type="submit" class="btn btn-primary">로그인</button>
-								<a href="${root }join" class="btn btn-danger">회원가입</a>
+								<a href="${root }user/join" class="btn btn-danger">회원가입</a>
 							</div>
 						</form>
 					</div>
