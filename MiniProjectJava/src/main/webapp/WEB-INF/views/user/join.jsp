@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="prefix" uri="http://www.springframework.org/tags/form"%>
 <c:set var='root' value='${pageContext.request.contextPath }/' />
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,7 @@
 			<div class="col-sm-6">
 				<div class="card shadow">
 					<div class="card-body">
-						<form action="${root}user/login" method="get">
+						<forms:form action="${root}join_pro" method="get">
 							<div class="form-group">
 								<label for="user_name">이름</label> <input type="text" id="user_name" name="user_name" class="form-control" />
 							</div>
@@ -45,7 +46,7 @@
 									<button type="submit" class="btn btn-primary">회원가입</button>
 								</div>
 							</div>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
