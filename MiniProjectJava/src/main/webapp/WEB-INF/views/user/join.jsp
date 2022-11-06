@@ -22,31 +22,40 @@
 			<div class="col-sm-6">
 				<div class="card shadow">
 					<div class="card-body">
-						<forms:form action="${root}join_pro" method="get">
+						<forms:form action="${root}user/join_pro" method="post" modelAttribute="joinUserBean">
 							<div class="form-group">
-								<label for="user_name">이름</label> <input type="text" id="user_name" name="user_name" class="form-control" />
+								<label for="user_name">이름</label>
+								<form:label path="user_name"></form:label>
+								<form:input path="user_name" class="form-control" />
 							</div>
 							<div class="form-group">
 								<label for="user_id">아이디</label>
 								<div class="input-group">
-									<input type="text" id="user_id" name="user_id" class="form-control" />
+									<form:input path="user_id" class='form_control' />
 									<div class="input-group-append">
 										<button type="button" class="btn btn-primary">중복확인</button>
 									</div>
 								</div>
 							</div>
+							<form:errors path="user_id" />
 							<div class="form-group">
-								<label for="user_pw">비밀번호</label> <input type="password" id="user_pw" name="user_pw" class="form-control" />
+								<label for="user_pw">비밀번호</label>
+								<form:label path="user_pw">비밀번호</form:label>
+								<input type="password" id="user_pw" name="user_pw" class="form-control" />
+								<form:password path="user_pw" class="form-control" />
+								<form:errors path='user'></form:errors>
 							</div>
 							<div class="form-group">
 								<label for="user_pw2">비밀번호 확인</label> <input type="password" id="user_pw2" name="user_pw2" class="form-control" />
+								<form:password path="user_pw2" class='form-control' />
+								<form:erros path='user_pw2' />
 							</div>
 							<div class="form-group">
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">회원가입</button>
 								</div>
 							</div>
-						</form:form>
+						</forms:form>
 					</div>
 				</div>
 			</div>
