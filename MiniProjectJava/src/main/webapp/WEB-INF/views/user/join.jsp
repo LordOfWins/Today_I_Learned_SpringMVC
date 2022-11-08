@@ -27,6 +27,7 @@
 								<label for="user_name">이름</label>
 								<form:label path="user_name"></form:label>
 								<form:input path="user_name" class="form-control" />
+								<form:errors path="user_name" style='color:red' />
 							</div>
 							<div class="form-group">
 								<label for="user_id">아이디</label>
@@ -36,6 +37,7 @@
 										<button type="button" class="btn btn-primary">중복확인</button>
 									</div>
 								</div>
+								<form:errors path="user_name" style='color:red' />
 							</div>
 							<form:errors path="user_id" />
 							<div class="form-group">
@@ -43,12 +45,12 @@
 								<form:label path="user_pw">비밀번호</form:label>
 								<input type="password" id="user_pw" name="user_pw" class="form-control" />
 								<form:password path="user_pw" class="form-control" />
-								<form:errors path='user'></form:errors>
+								<form:errors path="user_name" style='color:red' />
 							</div>
 							<div class="form-group">
-								<label for="user_pw2">비밀번호 확인</label> <input type="password" id="user_pw2" name="user_pw2" class="form-control" />
+								<label for="user_pw2">비밀번호 확인</label>
 								<form:password path="user_pw2" class='form-control' />
-								<form:erros path='user_pw2' />
+								<form:errors path="user_name" style='color:red' />
 							</div>
 							<div class="form-group">
 								<div class="text-right">
